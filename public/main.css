@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+ul{
+    font-family: "Chivo Mono", monospace;
+    display: flex;
+    gap: 50px;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    transition: 0.5s ease;
+}
+ul:hover li a{
+    color: #6aecf1;
+
+}
+ul:hover li a:not(:hover){
+    color: white;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+
+
+h2{
+    display: flex;
+    color: white;
+    margin-top: 20px;
+    font-size: 30px;
+    justify-content: center;
+}
+
+.scroll-container {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+#save, #addNewCourseButton {
+    height: 40px;
+    color: #fff;
+    background: #573b8a;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    width: 20%;
+}
+
+#save:hover, #addNewCourseButton:hover {
+    background: #6d44b8;
+}
+
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 52px;
+}
+
+.category {
+    color: #0f0c29;
+    font-size: large;
+    background: white;
+    height: 40px;
+    padding-left: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.average {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    padding-right: 20px;
+    align-self: center;
+    text-align: center;
+}
+.averageContainer {
+    display: flex;
+    justify-content: center;
+    margin: 25px 10px 20px 10px;
+    flex-wrap: wrap;
+}
+.courseContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    box-shadow: 0px 0px 50px 5px;
+    margin: 0px 50px;
+}
+
+#result {
+    font-weight: 100;
+    margin-bottom: 0 !important;
+    font-size: 35px;
+}
+
+
+@media (max-width: 900px) {
+    #save, #addNewCourseButton {
+        width: 25%;
+    }
+}
+
+@media (max-width: 736px) {
+    body {
+        margin: 20px; 
+    }
+
+    .buttonContainer {
+        align-items: center; 
+        margin: 10px; 
+    }
+    .titleMain {
+        text-align: center;
+        margin: 0px 40px;
+    }
+
+    .col-sm-12 {
+        width: 100%;
+    }
+
+    #save, #addNewCourseButton {
+        width: 35%;
+    }
+
+     .courseContainer{
+        margin: 0px 8px;
+        text-align: center;
+    } 
+}
+
+@media (max-width: 480px) {
+    #save, #addNewCourseButton {
+        width: 50%;
+        margin: 2px;
+    }
+    
+    .courseContainer{
+        margin-bottom: 10px;
+        display: flow;
+        border-top: groove;
+        border-color: #0000008c;
+        text-align: center;
+        padding-top: 12px;
+        box-shadow: 0 0;
+    }
+    .category {
+        width: 31%;
+    }
+    button.category {
+        width: 10% !important;
+    }
+}
+
+/* ... (remaining code) ... */
+@media (max-width: 350px) {
+    #save, #addNewCourseButton {
+        width: 80%;
+        margin: 2px;
+    }
+    .buttonContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .titleMain {
+        margin: 0px 15px;
+    }
+    .courseContainer{
+        margin: 10px 0px;
+        display: flow;
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+    .category {
+        width: 45%;
+    }
+    .average {
+        padding: 5px;
+    }
+    .averageContainer {
+        margin: 20px;
+    }
+}
