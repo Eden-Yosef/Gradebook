@@ -1,93 +1,156 @@
-html, body { height: 100%; }
-body {
-overflow: hidden;
+html {
+  height: 100%;
 }
 
-.ocean { 
-    height: 5%;
-    width:100%;
-    position:absolute;
-    bottom:0;
-    left:0;
-    background: #015871;
-    display: block;
+body {
+  height: 100%;
+  margin: 25px 0px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Jost", sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  overflow: hidden;
+}
+
+.ocean {
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #015871;
+  display: block;
 }
 
 .wave {
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
-    position: absolute;
-    top: -198px;
-    width: 6400px;
-    height: 198px;
-    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-    transform: translate3d(0, 0, 0);
-    display: block;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg)
+    repeat-x;
+  position: absolute;
+  top: -198px;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+  display: block;
 }
 
 .wave:nth-of-type(2) {
-    top: -175px;
-    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-    opacity: 1;
-    display: block;
+  top: -175px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+    swell 7s ease -1.25s infinite;
+  opacity: 1;
+  display: block;
 }
 
 @keyframes wave {
-    0% {
-        margin-left: 0;
-    }
-    100% {
-        margin-left: -1600px;
-    }
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
 }
 
 @keyframes swell {
-    0%, 100% {
-        transform: translate3d(0,-25px,0);
-    }
-    50% {
-        transform: translate3d(0,5px,0);
-    }
-}
-body{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Jost', sans-serif;
-    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  0%,
+  100% {
+    transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
 }
 
-ul{
-    font-family: "Chivo Mono", monospace;
-    display: flex;
-    gap: 50px;
+.navbar {
+  margin-top: 8px; 
+  display: block
 }
-ul li{
-    list-style: none;
-}
-ul li a{
-    font-size: 22px;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    transition: 0.5s ease;
-}
-ul:hover li a{
-    color: #6aecf1;
 
+ul {
+  font-family: "Chivo Mono", monospace;
+  display: flex;
+  gap: 50px;
 }
-ul:hover li a:not(:hover){
-    color: white;
-    opacity: 0.3;
-    filter: blur(1px);
+
+ul li {
+  list-style: none;
 }
-.font{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+ul li a {
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  transition: 0.5s ease;
+}
+
+ul:hover li a {
+  color: #6aecf1;
+}
+
+ul:hover li a:not(:hover) {
+  color: white;
+  opacity: 0.3;
+  filter: blur(1px);
+}
+
+.container {
+  max-width: 1000px !important;
+}
+
+.aboutTitle {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 55px;
+  font-weight: 500;
+}
+
+.aboutText {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 80px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 1001;
+  font-weight: 300;
+}
+
+@media (max-width: 992px) {
+  .aboutTitle {
+    font-size: 45px;
+    font-weight: 500;
+  }
+  .aboutText {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 660px !important;
+  }
+
+  .aboutTitle {
+    font-size: 40px;
+  }
+  .aboutText {
+    font-size: 18px;
+    margin-bottom: 45px;
+  }
+}
+@media (max-width: 520px) {
+  .aboutTitle {
+    font-size: 30px;
+  }
+  .aboutText {
+    font-size: 17px;
+  }
 }
