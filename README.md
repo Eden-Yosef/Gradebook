@@ -8,10 +8,15 @@ Take control of your grades and let Gradebook guide you towards academic success
 Follow these simple steps to get started with Gradebook:
 
 ✏️ **Sign Up**: Create an account on Gradebook to access the full suite of features.
+
 ✏️ **Add Courses**: Add your courses to Gradebook, including the course name and any relevant details.
+
 ✏️ **Enter Grades**: Input your grades for each course. Gradebook supports a variety of grading scales, making it flexible for different academic systems.
+
 ✏️ **GPA Calculation**: Let Gradebook do the work for you! The platform automatically calculates your GPA based on the entered grades.
+
 ✏️ **Snapshot of Performance**: Get a quick snapshot of your academic performance at any time. See how each course contributes to your overall GPA.
+
 ✏️ **Make Adjustments**: Easily make changes to your grades or update information as needed. Gradebook ensures that your GPA is always up-to-date.
 
 ## Features 📌
